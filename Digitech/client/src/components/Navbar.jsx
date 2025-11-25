@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaHome, FaInfoCircle, FaServicestack, FaEnvelope } from "react-icons/fa";
+import { GrGallery } from "react-icons/gr";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -39,6 +40,12 @@ const Navbar = () => {
           <li>
             <Link to="/services" onClick={() => setOpen(false)}>
               <FaServicestack /> Services
+            </Link>
+          </li>
+
+           <li>
+            <Link to="/gallery" onClick={() => setOpen(false)}>
+              <GrGallery /> Gallery
             </Link>
           </li>
 

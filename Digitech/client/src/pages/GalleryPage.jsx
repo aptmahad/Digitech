@@ -1,6 +1,5 @@
-import React from "react";
-
-
+import React from 'react'
+import "./GalleryPage.css";
 const galleryImages = [ 
      "https://blog.invgate.com/hubfs/Digital-worksplace---blog-post.jpg", 
      "https://cioafrica.co/wp-content/uploads/2019/09/Digital-Marketing-01.png",
@@ -10,21 +9,26 @@ const galleryImages = [
      "https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2025/02/agentforce-marquee-what-is-digital-labor.png?resize=1024,576",
      ];
 
-const GallerySection = () => {
+const GalleryPage = () => {
   return (
-    <section className="gallery-section">
-      <h2 className="gallery-title">Gallery</h2>
-      <div className="gallery-wrapper">
-        <div className="gallery-grid">
-          {galleryImages.map((src, index) => (
-            <div key={index} className="gallery-item">
-              <img src={src} alt={`Gallery image ${index + 1}`} />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+
+    <><section className='gallery-hero'>
+
+      </section>
+      
+      <section className="gallery-section-page">
+              <h2 className="gallery-title-page">Gallery</h2>
+              <div className="gallery-wrapper-page">
+                  <div className="gallery-grid-page">
+                      {galleryImages.map((src, index) => (
+                          <div key={index} className="gallery-item-page">
+                              <img src={src} alt={`Gallery image ${index + 1}`} />
+                          </div>
+                      ))}
+                  </div>
+              </div>
+          </section></>
   );
 };
 
-export default GallerySection;
+export default GalleryPage

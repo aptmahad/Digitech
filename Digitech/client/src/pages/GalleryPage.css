@@ -1,0 +1,111 @@
+:root {
+  --primary: #051e33;
+  --accent: rgb(7, 121, 129);
+  --text: #1f2937;
+  --white: #ffffff;
+  --shadow-light: rgba(7, 121, 129, 0.1);
+  --shadow-strong: rgba(7, 121, 129, 0.3);
+}
+
+/* HERO SECTION */
+.gallery-hero {
+  width: 100%;
+  height: 800px; /* no top gap */
+  /* background: linear-gradient(
+    135deg,
+    #1d3b47 0%,
+    #234453 40%,
+    #1f3741 100%
+  ); */
+  background-image: url(../src/assets/gallerybg.png);
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-left: 80px;  /* balanced spacing */
+  padding-right: 20px; /* fix right overflow */
+}
+
+.gallery-section-page {
+  width: 100%; /* Full width */
+  /* padding: 100px 20px 100px;
+  margin: -100px auto 100px; */
+   background-image: url(../assets/bg3.png);
+  background-size: cover;
+  box-sizing: border-box;
+  height: 800px;
+  
+}
+
+.gallery-title-page {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center; /* Centered to span full width */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+}
+
+/* New wrapper to center grid and constrain max width */
+.gallery-wrapper-page {
+  max-width: 960px; /* or 1200px per your layout */
+  margin: 0 auto;  /* center horizontally */
+  box-sizing: border-box;
+}
+
+.gallery-grid-page {
+ display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Gallery items & images */
+.gallery-item-page {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(35, 68, 83, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item-page:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(35, 68, 83, 0.15);
+}
+
+.gallery-item-page img {
+   width: 100%;
+  height: 200px;        /* Force same height */
+  object-fit: cover;    /* Crop image to fit the box */
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item-page:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive: fallback to 1 or 2 columns on smaller screens */
+@media (max-width: 900px) {
+  .gallery-grid-page {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid-page {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-title-page {
+    font-size: 26px;
+    padding: 0 10px;
+  }
+}
+
+

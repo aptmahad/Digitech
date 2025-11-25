@@ -506,9 +506,9 @@ color: var(--accent);
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* exactly 3 items per row */
-  gap: 24px;
+   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 /* Gallery items & images */
@@ -526,10 +526,10 @@ color: var(--accent);
 }
 
 .gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+ width: 100%;
+  height: 200px;        /* Force same height */
+  object-fit: cover;    /* Crop image to fit the box */
+  border-radius: 10px;
   transition: transform 0.5s ease;
 }
 
